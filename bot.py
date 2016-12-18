@@ -326,6 +326,9 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
+    fh = open("ADD_TO_SERVER.bat", "w")
+    fh.write("https://thelmgn.com/db/gi?id=" + client.user.id)
+    fh.close()
 
 async def logEvent(logText,coloroony):
     if not os.path.exists("logs"):
