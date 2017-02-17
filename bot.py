@@ -304,7 +304,7 @@ token = "MjQ3NzkyNzM3NzU4MzQ3MjY0.CzhFLQ.E31SQZ93sR_c5M722sh30eOYwtM" # By defau
 
 
 import os
-
+import discord
 
 
 client = discord.Client()
