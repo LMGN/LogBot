@@ -304,18 +304,7 @@ token = "MjQ3NzkyNzM3NzU4MzQ3MjY0.CzhFLQ.E31SQZ93sR_c5M722sh30eOYwtM" # By defau
 
 
 import os
-try:
-    from shutil import make_archive
-    import discord
-    import asyncio
-    import time
-except ImportError:
-    print("Ohh noooeess. You don't have Discord.py installed'")
-    try:
-        import pip
-        pip.main(['install', 'discord.py'])
-    except:
-        print("We tried to install them for you, but it failed")
+
 
 
 client = discord.Client()
@@ -378,6 +367,7 @@ async def on_message(message):
 @client.event
 async def on_message_edit(before, after):
     if before.content == after.content:
+        print("Message edited but nothing changed. Please ignore this.")
     else:
         await logEvent("Message Edited by: " + after.author.display_name + " " +after.author.mention + " in " + after.channel.name + "    " + chr(13) + "Old Content:" + chr(13) + before.content + chr(13) + "New Content:" + chr(13) + after.content + chr(13) + "", change())
 
